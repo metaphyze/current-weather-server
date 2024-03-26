@@ -200,7 +200,7 @@ func main() {
 		version       = flag.Bool("version", false, "Print version and exit")
 		maxProcessors = flag.Int("maxProcessors", 0, "Maximum number of processors to use (0=ALL)")
 		logDir        = flag.String("logDir", currentWorkingDir, "Log directory")
-		logFilePrefix = flag.String("LogFilePrefix", "weatherserver", "The prefix for log files")
+		logFilePrefix = flag.String("logFilePrefix", "weatherserver", "The prefix for log files")
 		port          = flag.String("port", "8000", "The port on which to run the server")
 		apiKey        = flag.String("apiKey", "", "The key to use for API calls to Open Weather")
 		//coldCoolWarmC = flag.String("coldCoolWarmC", "4.5,15.5,25", "Comma separated list of cold/cool/warm temperatures in Celsius")
