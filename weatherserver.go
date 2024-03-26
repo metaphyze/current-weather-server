@@ -199,7 +199,7 @@ func main() {
 	var (
 		version       = flag.Bool("version", false, "Print version and exit")
 		maxProcessors = flag.Int("maxProcessors", 0, "Maximum number of processors to use (0=ALL)")
-		logDir        = flag.String("logDir", currentWorkingDir, "Log directory")
+		logDir        = flag.String("logDir", ".", "Log directory")
 		logFilePrefix = flag.String("logFilePrefix", "weatherserver", "The prefix for log files")
 		port          = flag.String("port", "8000", "The port on which to run the server")
 		apiKey        = flag.String("apiKey", "", "The key to use for API calls to Open Weather")
@@ -212,6 +212,10 @@ func main() {
 	if *version {
 		fmt.Printf("Current Weather Server, version: %v\n", VERSION)
 		return
+	}
+
+	if *logDir == "." {
+		*logDir = currentWorkingDir
 	}
 
 	err = logging.Initialize(*logFilePrefix, *logDir)
