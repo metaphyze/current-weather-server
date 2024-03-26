@@ -60,7 +60,7 @@ This API key must be passed to the server when it's started like this:
   -coldCoolWarmF string
         Comma separated list of cold/cool/warm temperatures in Fahrenheit (default "40,60,77")
   -logDir string
-        Log directory (default current directory)
+        Log directory (default ".")
   -maxProcessors int
         Maximum number of processors to use (0=ALL)
   -port string
